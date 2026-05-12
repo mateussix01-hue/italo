@@ -1,13 +1,14 @@
-const items = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      io.unobserve(entry.target);
-    }
+const btn = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+btn?.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+document.querySelectorAll('.nav a').forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
+document.getElementById('year').textContent = new Date().getFullYear();
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 }, { threshold: 0.12 });
-items.forEach((el, i) => {
-  el.style.transitionDelay = `${Math.min(i * 55, 380)}ms`;
-  io.observe(el);
-});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));

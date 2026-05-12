@@ -1,13 +1,21 @@
-# IA Assessoria Comercial - Site estático
+# IA Assessoria Comercial - Site institucional
 
-Site pronto para publicar na Vercel, Netlify ou GitHub Pages.
+Site estático pronto para publicar na Vercel, Netlify ou qualquer hospedagem.
 
-## Como publicar na Vercel
-1. Crie um repositório no GitHub.
-2. Envie todos os arquivos desta pasta para o repositório.
-3. Na Vercel, clique em **Add New Project**.
-4. Importe o repositório.
-5. Framework Preset: **Other**.
-6. Build Command: deixe vazio.
-7. Output Directory: deixe vazio ou coloque `.`.
-8. Clique em Deploy.
+## Arquivos
+- `index.html`: estrutura da página
+- `styles.css`: visual responsivo/mobile-first
+- `script.js`: menu mobile e animações
+- `assets/`: logos, foto editada e imagens do site
+
+## Publicar na Vercel
+1. Suba todos os arquivos para um repositório no GitHub.
+2. Entre na Vercel e clique em **Add New Project**.
+3. Importe o repositório.
+4. Framework: **Other** ou **Static**.
+5. Build command: deixe vazio.
+6. Output directory: deixe vazio ou `./`.
+7. Clique em **Deploy**.
+
+## WhatsApp configurado
+Número usado nos botões: +55 79 8173-2121
